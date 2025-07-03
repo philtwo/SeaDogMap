@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Tracker</title>
+    <!-- CSS and JS libraries -->
+    <link rel="stylesheet" href="SeaDog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+</head>
+<body>
+    <!-- content -->
+    <div class="container">
+        <!-- Sidebar content -->
+        <div class="sidebar">
+            <div class="logo">
+                🦈 SeaDog
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalSharks">12</div>
+                    <div class="stat-label">Total Tracked</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="activeSharks">8</div>
+                    <div class="stat-label">Active Now</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="recentPings">24</div>
+                    <div class="stat-label">Recent Pings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="avgDepth">45m</div>
+                    <div class="stat-label">Avg Depth</div>
+                </div>
+            </div>
+            <div class="filter-section">
+                <div class="filter-title">Filter by Species</div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="great-white">Great White</button>
+                    <button class="filter-btn" data-filter="hammerhead">Hammerhead</button>
+                    <button class="filter-btn" data-filter="tiger">Tiger</button>
+                    <button class="filter-btn" data-filter="bull">Bull</button>
+                </div>
+            </div>
+            <div class="filter-section">
+                <div class="filter-title">Tracked Sharks</div>
+                <div class="shark-list" id="sharkList">
+                    <!-- Sharks will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <!-- Map will be rendered here -->
+        </div>
+    </div>
+</body>
+<script src="SeaDog.js"></script>
+</html>
